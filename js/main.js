@@ -1,21 +1,10 @@
 $(document).ready(function () {
     $('.search-block').css({
-        display: 'table',
-        width: '100%',
-        height: '100%'
-    })
-    $('.search-bar').css({
-        display: 'table-cell',
-        textAlign: 'center',
-        verticalAlign: 'middle'
-    })
-});
-$("#search-input").bind("change paste keyup", function() {
-    $('.search-block').css({
         display: 'block',
         width: '100%',
         height: '100%'
     });
+
     $('.search-bar').css({
         display: 'block',
         textAlign: 'center',
@@ -24,11 +13,13 @@ $("#search-input").bind("change paste keyup", function() {
         left: 0,
         top: 0,
         padding: '20px 10px 15px 10px',
-        height: '50px',
+        height: '85px',
         boxShadow: '0 2px 11px -3px rgba(0,0,0,0.3)',
         background: '#fff',
         zIndex: 2
     });
+});
+$("#search-input").bind("change paste keyup", function() {
     youtubeAPICall($(this).val());
 });
 $("#search-input").focus(function(){
